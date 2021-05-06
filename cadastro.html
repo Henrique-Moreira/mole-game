@@ -7,26 +7,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Cadastro | Mole Game</title>
     <script src="js/cadastro.js"></script>
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body class="login">
-    <main>
-        <section>
-            <p id="alerta">Página cadastro</p>
-        </section>
-        <section>
-            <div id="cadastro">
-                <h1>Mole Game</h1>
-                <form action="">
-                    <input type="text" name="user" id="user" placeholder="Usuário">
-                    <input type="password" name="pwd" id="pwd" placeholder="Senha">
-                    <input type="button" id="btnCadastro" value="Entrar">
+<body>
+    <div id="login">
+        <div class="d-flex p-2 justify-content-center">
+            <img src="img/toupeira.gif" alt="">
+            <h3 class="text-center pt-5">Mole Game</h3>
+            <img src="img/toupeira.gif" alt="">
+        </div>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    <form action="" id="login-form" class="form">
+                        <h3 class="text-center text-info">Cadastro</h3>
+                        <div class="form-group">
+                            <label for="user" class="text-info">Usuário:</label><br>
+                            <input type="text" name="user" id="user" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd" class="text-info">Senha:</label><br>
+                            <input type="password" name="pwd" id="pwd"class="form-control">
+                        </div>
+                        <div class="form-group">      
+                            <input type="button" id="btnCadastro" value="Cadastrar" class="btn btn-info btn-md text-center">
+                        </div>
+                        <!-- <div id="register-link" class="text-right">
+                            <br><a href="cadastro.html" class="text-info">Registre-se aqui</a>
+                        </div> -->
                 </form>
-                <p>Não é cadastrado? <a href="cadastro.html"> Cadastre-se aqui</a></p>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+</div>
+</div>
 </body>
+
 </html>
