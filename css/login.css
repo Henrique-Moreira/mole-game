@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=Roboto&display=swap');
+:root {
+    --color-primary: #007c15;
+    --color-secondary: #f38200;
+    --color-text: #311f02;
+    /* --color-secondary: #48b102; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("../img/grass-texture.jpg");
+}
+
+#login h3{
+    font-family: Girassol;
+    color: var(--color-text) !important;
+    font-size:50px !important;
+}
+
+#login input[type=button]{
+    font-family: Girassol;
+    color: var(--color-text) !important;
+    background-color: var(--color-primary);
+    font-weight: bold;
+    border: none;
+}
+
+#login .text-info {
+    font-family: Girassol;
+    color: var(--color-text) !important;
+}
+
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    background-color: var(--color-secondary);
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
