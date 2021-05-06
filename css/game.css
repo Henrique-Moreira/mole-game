@@ -2,3 +2,38 @@
 body {
     background-image: url("../img/grass-texture.jpg");
 }
+
+:root {
+    --color-primary: #007c15;
+    --color-secondary: #f38200;
+    --color-text: #311f02;
+}
+
+/* .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+} */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: var(--color-secondary);
+    border-right: 5px solid var(--color-text);
+    padding: 20px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
