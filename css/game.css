@@ -7,6 +7,7 @@ body {
     --color-primary: #007c15;
     --color-secondary: #f38200;
     --color-text: #311f02;
+    --color-text-secondary: #613d03;
 }
 
 /* .wrapper {
@@ -37,3 +38,65 @@ body {
     max-width: 250px;
     min-height: 100vh;
 }
+
+#buttons button {
+    background-color: var(--color-text);
+    border: none;
+    color: white;
+    font-family:Girassol;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    border: 0px;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.informations #timer, #points{
+    background-color: var(--color-text);
+    color: var(--color-primary);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 15px;
+    font-weight: bold;
+    font-family: Girassol;
+    font-size: 20px !important;
+    text-align: center;
+}
+
+.data {
+    background-color: var(--color-text-secondary);
+    display: flex inline;
+    text-align: center;
+    border-radius:50px;
+    padding: 0px 20px;
+}
+
+.levels-select p{
+    font-family: Girassol;
+    font-size: 25px;
+    margin-bottom:10px !important;
+    font-weight: bold;
+}
+
+.input-levels {
+    font-family: Girassol;
+    background-color:  var(--color-text-secondary);
+    overflow-y: visible;
+    resize: none;
+    border: 0px;
+    font-size: 20px;
+    height: 90px;
+    display: block;
+    margin: auto;
+    border-radius:5px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+  

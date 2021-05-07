@@ -2,7 +2,7 @@ const $levels = { "easy": 3, "medium": 5, "hard": 7 };
 const $imgWidth = 147;  // largura da toupeira
 const $imgHeight = 108;  // altura da toupeira
 const $imgsTheme = {"defaut": "buraco.gif", "active":"toupeira.gif", "dead":"morreu.gif"}
-var $inicialTime = 30;
+var $inicialTime = 10;
 var $timeGame = $inicialTime; // Tempo de jogabilidade independente da fase
 var $idChronoGame; // Ira controlar o setInterval do cronometro
 var $idChronoStartGame; // Ira controlar o setInterval do jogo
@@ -36,9 +36,12 @@ function endGame() {
 }
 
 function btnCtrl() {
+    $("#btnPlay").prop('disabled', true);
+    $("#btnPlay").css("background-color", "var(--color-text-secondary)");
     $("#btnPause").prop('disabled', false);
     $("#btnStop").prop('disabled', false);
     $("#btnExit").prop('disabled', true);
+    $("#btnExit").css("background-color", "var(--color-text-secondary)");
 }
 
 // cria a moldura do tabuleiro do jogo conforme o nível de dificuldade

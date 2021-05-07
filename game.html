@@ -11,29 +11,38 @@
     <link rel="stylesheet" href="css/jAlertWifi.css">
     <script src="js/jAlertWifi.js"></script>
     <script src="js/game.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/game.css">
 </head>
 
 <body>
     <div class="wrapper">
         <nav id="sidebar">
-            <div class="">
-                <p>Level</p>
-                <select name="level" id="level" select class="form-select" multiple aria-label="multiple select example" onchange="fillBoard()">
+            <div class="levels-select">
+                <p class="text-center">Dificuldade</p>
+                <select name="level" id="level" select class="form-select input-levels" multiple onchange="fillBoard()">
+                    <option value="easy" selected>Fácil</option>
+                    <option value="medium">Médio</option>
+                    <option value="hard">Difícil</option>
+                </select>
             </div>
-                <option value="easy" selected>Fácil</option>
-                <option value="medium">Médio</option>
-                <option value="hard">Difícil</option>
-            </select>
             <div id="buttons">
                 <button id="btnPlay">Play</button>
                 <button id="btnPause" disabled>Pause</button>
                 <button id="btnStop" disabled>Stop</button>
                 <button id="btnExit">Exit</button>
             </div>
-            <p>Tempo: 00:<span id="chrono">00</span></p>
-            <p>Pontuação: <span id="score">0</span></p>
+            <div class="informations">
+                <div id="timer">
+                    <p>Tempo</p>
+                    <p class="data">00:<span id="chrono">00</span></p>
+                </div>
+                <div id="points">
+                    <p>Pontuação</p>
+                    <p><span id="score" class="data">0</span></p>
+                </div>
+            </div>
         </nav>
         <section>
             <div id="content">
