@@ -3,6 +3,9 @@ body {
     background-image: url("../img/grass-texture.jpg");
 }
 
+#game {
+    cursor: url("../img/marreta1.png"), default;
+}
 :root {
     --color-primary: #007c15;
     --color-secondary: #f38200;

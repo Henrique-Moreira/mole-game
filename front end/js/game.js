@@ -32,6 +32,9 @@ $(document).ready(function () {
         $nivel = $("#level").val();
         createRank($nivel);
     });
+    $("cursor").on('click',function() {
+        alert("asuhsauh");
+    });
 });
 
 function clearIntervals() {
