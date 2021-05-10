@@ -23,9 +23,9 @@
             <div class="levels-select">
                 <p class="text-center">Dificuldade</p>
                 <select name="level" id="level" select class="form-select input-levels" multiple onchange="fillBoard()">
-                    <option value="easy" selected>Fácil</option>
-                    <option value="medium">Médio</option>
-                    <option value="hard">Difícil</option>
+                    <option value="easy" id="easy" selected>Fácil</option>
+                    <option value="medium" id="medium" >Médio</option>
+                    <option value="hard" id="hard" >Difícil</option>
                 </select>
             </div>
             <div id="buttons">
@@ -43,6 +43,17 @@
                     <p>Pontuação</p>
                     <p><span id="score" class="data">0</span></p>
                 </div>
+            </div>
+            <div id="ranking">
+                <table>
+                    <thead>
+                        <th>Score</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                    </thead>
+                    <tbody id="tBodyRanking">
+                    </tbody>
+                </table>
             </div>
         </nav>
         <section>

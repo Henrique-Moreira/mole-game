@@ -8,7 +8,8 @@ var $idChronoGame; // Ira controlar o setInterval do cronometro
 var $idChronoStartGame; // Ira controlar o setInterval do jogo
 
 $(document).ready(function () {
-    fillBoard(); // Melhorar
+    createRank("easy");
+    fillBoard();
     $("#chrono").text($inicialTime);
     $("#btnPlay").click(function () {
         btnCtrl(true);
@@ -26,6 +27,10 @@ $(document).ready(function () {
     $("#btnExit").click(function(){
         InsertRank();
         window.open("login.html", "_self");
+    });
+    $("#level").on('change', function() {
+        $nivel = $("#level").val();
+        createRank($nivel);
     });
 });
 

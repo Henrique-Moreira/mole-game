@@ -99,4 +99,9 @@ body {
     cursor: pointer;
     outline: 0px auto -webkit-focus-ring-color;
 }
+
+
   
+#ranking table,tbody, th, td{
+    border: 1px solid blue;
+}

@@ -19,7 +19,7 @@ public class MediumRanking implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private int pontos;
-	
+	private String data;
 	@ManyToOne
 	private Usuario usuario;
 }
