@@ -5,8 +5,10 @@ $(document).ready(function () {
         if ($user && $pwd) {
             $.getJSON("http://localhost:8080/usuarios",
                 function ($registros) {
-                    if ($registros.filter($usuario => $usuario.user == $user && $usuario.pwd == $pwd).length > 0)
+                    if ($registros.filter($usuario => $usuario.user == $user && $usuario.pwd == $pwd).length > 0) {
+                        localStorage.setItem("user", $user);
                         window.open("game.html", "_self");
+                    }                  
                     else {
                         alert("Usuário Inválido");
                     }

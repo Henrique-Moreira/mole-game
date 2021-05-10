@@ -25,7 +25,7 @@ $(document).ready(function () {
         endGame();
     });
     $("#btnExit").click(function(){
-        InsertRank();
+        insertRank();
         window.open("login.html", "_self");
     });
     $("#level").on('change', function() {
@@ -49,7 +49,7 @@ function endGame() {
     clearInterval($idChronoStartGame);
     alertWifi(`Fim de Jogo. Sua pontuação foi = ${$("#score").text()}`, false, 0, `img/${$imgsTheme.dead}`, "50");
     fillBoard();
-    InsertRank();
+    insertRank($("#score").text());
     $("#score").text("0");
     $timeGame = $inicialTime;
     $("#chrono").text($timeGame);
