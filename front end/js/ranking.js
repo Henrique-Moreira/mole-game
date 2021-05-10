@@ -24,7 +24,7 @@ function insertRank($score) {
             }
             axios.post($url, $objectRank);
         });
-        createRank($dificuldade);  
+          
 }
 
 // assim que a pagina carrega busca no back-end o ranking

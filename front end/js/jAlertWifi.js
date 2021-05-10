@@ -39,7 +39,10 @@ function alertWifi($txt, $hasTimer, $countTimer, $srcImg, $fontSize) {
     if (!$hasTimer) {
         $btnPanelInfo = $("<button></button>").text("Fechar").addClass("button");
         $($contentPanel).append($btnPanelInfo);
-        $($btnPanelInfo).click(function(){closeAlertWifi($panelInfo)});
+        $($btnPanelInfo).click(function(){
+            closeAlertWifi($panelInfo)
+            createRank($dificuldade);
+        });
     }
 
     // Adiciona o painel de informações ao body
