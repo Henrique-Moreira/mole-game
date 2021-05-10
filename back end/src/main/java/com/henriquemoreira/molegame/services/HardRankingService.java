@@ -16,7 +16,7 @@ public class HardRankingService {
 	HardRankingRepository repositorio;
 
 	public List<HardRanking> all() {
-		return repositorio.searchTop10();
+		return repositorio.searchTop();
 	}
 
 	public HardRanking newRank(@RequestBody HardRanking rank) {

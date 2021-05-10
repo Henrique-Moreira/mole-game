@@ -12,5 +12,5 @@ import com.henriquemoreira.molegame.entities.MediumRanking;
 public interface MediumRankingRepository extends JpaRepository<MediumRanking, Integer> {
 
 	@Query(value = "SELECT * FROM medium_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
-	List<MediumRanking> searchTop10();
+	List<MediumRanking> searchTop();
 }

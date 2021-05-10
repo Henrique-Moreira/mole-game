@@ -12,5 +12,5 @@ import com.henriquemoreira.molegame.entities.EasyRanking;
 public interface EasyRankingRepository extends JpaRepository<EasyRanking, Integer> {
 	
 	@Query(value = "SELECT * FROM easy_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
-	List<EasyRanking> searchTop10();
+	List<EasyRanking> searchTop();
 }

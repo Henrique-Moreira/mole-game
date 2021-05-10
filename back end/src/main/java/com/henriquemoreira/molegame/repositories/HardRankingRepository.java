@@ -12,5 +12,5 @@ import com.henriquemoreira.molegame.entities.HardRanking;
 public interface HardRankingRepository extends JpaRepository<HardRanking, Integer> {
 
 	@Query(value = "SELECT * FROM hard_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
-	List<HardRanking> searchTop10();
+	List<HardRanking> searchTop();
 }

@@ -16,7 +16,7 @@ public class EasyRankingService {
 	EasyRankingRepository repositorio;
 
 	public List<EasyRanking> all() {
-		return repositorio.searchTop10();
+		return repositorio.searchTop();
 	}
 
 	public EasyRanking newRank(@RequestBody EasyRanking rank) {

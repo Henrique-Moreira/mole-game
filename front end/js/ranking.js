@@ -4,7 +4,7 @@ var month = date.getMonth() + 1;
 var year = date.getFullYear();
 var currentDate = `${(('' + day).length < 2 ? '0' : '') + day}/${(('' + month).length < 2 ? '0' : '') + month}/${year}`;
 
-// assim que o jogo acabar, atualiza o ranking
+// atualiza o ranking
 function insertRank($score) {
     console.log($score)
     $dificuldade = $("#level").val();
@@ -23,11 +23,10 @@ function insertRank($score) {
                 }
             }
             axios.post($url, $objectRank);
-        });
-          
+        });        
 }
 
-// assim que a pagina carrega busca no back-end o ranking
+// busca no back-end o ranking
 function createRank($level) {
     $("#tBodyRanking").empty();
     $.getJSON(`http://localhost:8080/${$level}/rank`,

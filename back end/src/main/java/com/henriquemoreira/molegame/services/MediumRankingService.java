@@ -16,7 +16,7 @@ public class MediumRankingService {
 	MediumRankingRepository repositorio;
 
 	public List<MediumRanking> all() {
-		return repositorio.searchTop10();
+		return repositorio.searchTop();
 	}
 
 	public MediumRanking newRank(@RequestBody MediumRanking rank) {
