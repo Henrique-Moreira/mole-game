@@ -26,7 +26,6 @@ body {
     max-width: 250px;
     background-color: var(--color-secondary);
     border-right: 5px solid var(--color-text);
-    padding: 20px;
 }
 
 #sidebar.active {
@@ -37,6 +36,10 @@ body {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
+}
+
+#buttons {
+    padding: 20px;
 }
 
 #buttons button {
@@ -100,8 +103,27 @@ body {
     outline: 0px auto -webkit-focus-ring-color;
 }
 
+#ranking table{
+    width:100%;
+}
 
-  
-#ranking table,tbody, th, td{
-    border: 1px solid blue;
+#ranking table th {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--color-text);
+    color: var(--color-primary);
+}
+
+#ranking {
+    font-family: Girassol;
+    width: 100%;
+}
+
+#ranking td, #ranking th {
+    border: 3px solid var(--color-primary);
+    background-color: var(--color-text-secondary);
+    color: white;
+    text-align: center;
+    height: 40px;
 }
