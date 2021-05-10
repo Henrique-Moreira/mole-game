@@ -3,7 +3,7 @@ $(document).ready(function () {
         let $user = $("#user").val();
         let $pwd = $("#pwd").val();
         let data = { "user": $user, "pwd": $pwd };
-        let url = "http://localhost:8080/";
+        let url = "http://localhost:8080/usuarios/new-user";
 
         if ($user && $pwd) {
             $.getJSON("http://localhost:8080/usuarios",

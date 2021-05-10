@@ -11,14 +11,28 @@ $(document).ready(function () {
     fillBoard(); // Melhorar
     $("#chrono").text($inicialTime);
     $("#btnPlay").click(function () {
-        btnCtrl();
+        btnCtrl(true);
         $idChronoStartGame = setInterval(startGame, 1180);
         $idChronoGame = setInterval(startChronoGame, 1000);
     });
-    $("#btnPause").click(function(){});
-    $("#btnStop").click(function(){});
-    $("#btnExit").click(function(){});
+    $("#btnPause").click(function(){
+        clearIntervals();
+        $("#btnPlay").prop('disabled', false);
+        $("#btnPlay").css("background-color", "var(--color-text)");
+    });
+    $("#btnStop").click(function(){
+        endGame();
+    });
+    $("#btnExit").click(function(){
+        InsertRank();
+        window.open("login.html", "_self");
+    });
 });
+
+function clearIntervals() {
+    clearInterval($idChronoStartGame);
+    clearInterval($idChronoGame);
+}
 
 function startChronoGame() {
     let $secondsFormat = (--$timeGame).toLocaleString("pt-br", {minimumIntegerDigits: 2});
@@ -30,18 +44,25 @@ function endGame() {
     clearInterval($idChronoStartGame);
     alertWifi(`Fim de Jogo. Sua pontuação foi = ${$("#score").text()}`, false, 0, `img/${$imgsTheme.dead}`, "50");
     fillBoard();
+    InsertRank();
     $("#score").text("0");
     $timeGame = $inicialTime;
-    $("#score").text($timeGame);
+    $("#chrono").text($timeGame);
+    btnCtrl(false);
 }
 
-function btnCtrl() {
-    $("#btnPlay").prop('disabled', true);
-    $("#btnPlay").css("background-color", "var(--color-text-secondary)");
-    $("#btnPause").prop('disabled', false);
-    $("#btnStop").prop('disabled', false);
-    $("#btnExit").prop('disabled', true);
-    $("#btnExit").css("background-color", "var(--color-text-secondary)");
+function btnCtrl(moment) {
+    const color = (moment == true) ? "var(--color-text-secondary)" : "var(--color-text)";
+
+    $("#btnPlay").prop('disabled', moment);
+    $("#btnPlay").css("background-color", color);
+
+    $("#btnPause").prop('disabled', !moment);
+    
+    $("#btnStop").prop('disabled', !moment);
+
+    $("#btnExit").prop('disabled', moment);
+    $("#btnExit").css("background-color", color);
 }
 
 // cria a moldura do tabuleiro do jogo conforme o nível de dificuldade

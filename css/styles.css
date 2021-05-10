@@ -36,6 +36,8 @@ body {
     max-width: 600px;
     height: 320px;
     background-color: var(--color-secondary);
+    border: 3px solid var(--color-text);
+    border-radius:5px !important;
 }
 
 #login .container #login-row #login-column #login-box #login-form {
