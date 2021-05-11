@@ -7,9 +7,9 @@ Mole-Game é um jogo onde o objetivo principal é clicar sobre uma toupeira que 
 Este jogo foi desenvolvido com o intuito de praticar meus conhecimentos adquiridos ao longo da minha formação durante o curso de tecnologia em Sistemas Para Internet.
 
 ### INSTALAÇÃO LOCAL
-• Instale xampp e mySqlWorkBench;
-• Utilize o Spring Tols Suide para Rodar o Back-End;
-• Clone o Repositório para a sua máquina através de `git clone https://github.com/Henrique-Moreira/mole-game.git `;
+* Instale xampp e mySqlWorkBench;
+* Utilize o Spring Tols Suide para Rodar o Back-End;
+* Clone o Repositório para a sua máquina através de `git clone https://github.com/Henrique-Moreira/mole-game.git`;
 
 ### TECNOLOGIAS UTILIZADAS
 * <img src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-10.png" alt="logo-html5" width="50"/>
