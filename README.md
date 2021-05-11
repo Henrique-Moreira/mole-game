@@ -20,7 +20,8 @@ Este jogo foi desenvolvido com o intuito de praticar meus conhecimentos adquirid
 * <img src="https://i.pinimg.com/originals/c0/26/1a/c0261af0418d8ad72fdd8a7f4379d7db.png" alt="jquery-logo" width="50"/>
 
 ### Imagens do Game
-
+<img src="/front end/img/login.png" alt="imagem login do jogo" width="400" height="500"/>  <img src="/front end/img/cadastro.png" alt="imagem cadastro do jogo" width="400" height="500"/>
+<img src="/front end/img/game.png" alt="imagem jogo" width="800" height="500"/>
 
 
 ----------------------------
