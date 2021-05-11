@@ -48,7 +48,7 @@ function startChronoGame() {
 function endGame() {
     clearInterval($idChronoGame);
     clearInterval($idChronoStartGame);
-    alertWifi(`Fim de Jogo. Sua pontuação foi = ${$("#score").text()}`, false, 0, `img/${$imgsTheme.dead}`, "50");
+    alertWifi(`<p>Fim de Jogo!</p> <p>Sua pontuação foi de ${$("#score").text()} ponto(s)</p>`, false, 0, `img/${$imgsTheme.dead}`, "50");
     fillBoard();
     insertRank($("#score").text());
     $("#score").text("0");

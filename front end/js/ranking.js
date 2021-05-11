@@ -6,7 +6,6 @@ var currentDate = `${(('' + day).length < 2 ? '0' : '') + day}/${(('' + month).l
 
 // atualiza o ranking
 function insertRank($score) {
-    console.log($score)
     $dificuldade = $("#level").val();
     $.getJSON("http://localhost:8080/usuarios",
         function ($registros) {
