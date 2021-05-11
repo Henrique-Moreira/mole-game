@@ -1,7 +1,7 @@
 # Mole-Game
 
 ### SOBRE O JOGO
-Whac-A-Mole é um popular jogo de arcade. No Japão, モ グ ラ 退 治 é um popular jogo de arcade inventado em 1975 por Kazuo Yamada da TOGO, baseado em dez dos esboços a lápis do designer de 1974, licenciado para a Bandai em 1977. Também pode ser comumente encontrado em festivais japoneses.
+Mole-Game é um jogo onde o objetivo principal é clicar sobre uma toupeira que muda de posição de forma aleatória após um certo período de tempo, além disso, há um ranking de acordo com os níveis de dificuldade.
 
 ### OBJETIVO
 Este jogo foi desenvolvido com o intuito de praticar meus conhecimentos adquiridos ao longo da minha formação durante o curso de tecnologia em Sistemas Para Internet.
