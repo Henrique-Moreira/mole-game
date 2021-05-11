@@ -32,9 +32,7 @@ $(document).ready(function () {
         $nivel = $("#level").val();
         createRank($nivel);
     });
-    $("cursor").on('click',function() {
-        alert("asuhsauh");
-    });
+    $("#game").css("cursor", "url('../img/marreta1.png'), auto");
 });
 
 function clearIntervals() {
@@ -88,7 +86,16 @@ function placeHolesBoard($level) {
     for ($i = 0; $i < Math.pow($level, 2); $i++) {
         $div = $("<div></div>");
         $img = $("<img>").attr({ "src":`img/${$imgsTheme.defaut}`, "id": `mole_${$i + 1}` });
-        $($img).click(function(){updateScore(this)});
+        $($img).click(function(){
+            setTimeout(() => {
+                $("#game").css("cursor", "url('../img/marreta2.png'), auto");
+                document.getElementById("punch").play();
+                setTimeout(() => {
+                    $("#game").css("cursor", "url('../img/marreta1.png'), auto");
+                }, 60)
+            }, 60);
+            updateScore(this);
+        });
         $($div).append($img);
         $("#board").append($div);
     }
