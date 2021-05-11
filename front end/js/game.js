@@ -2,18 +2,18 @@ const $levels = { "easy": 3, "medium": 5, "hard": 7 };
 const $imgWidth = 147;  // largura da toupeira
 const $imgHeight = 108;  // altura da toupeira
 const $imgsTheme = {"defaut": "buraco.gif", "active":"toupeira.gif", "dead":"morreu.gif"}
-var $inicialTime = 10;
+var $inicialTime = 30;
 var $timeGame = $inicialTime; // Tempo de jogabilidade independente da fase
 var $idChronoGame; // Ira controlar o setInterval do cronometro
 var $idChronoStartGame; // Ira controlar o setInterval do jogo
 
 $(document).ready(function () {
-    createRank("easy");
+    createRank($("#level").val());
     fillBoard();
     $("#chrono").text($inicialTime);
     $("#btnPlay").click(function () {
         btnCtrl(true);
-        $idChronoStartGame = setInterval(startGame, 1180);
+        $idChronoStartGame = setInterval(startGame, 850);
         $idChronoGame = setInterval(startChronoGame, 1000);
     });
     $("#btnPause").click(function(){
@@ -89,7 +89,6 @@ function placeHolesBoard($level) {
         $($img).click(function(){
             setTimeout(() => {
                 $("#game").css("cursor", "url('../img/marreta2.png'), auto");
-                document.getElementById("punch").play();
                 setTimeout(() => {
                     $("#game").css("cursor", "url('../img/marreta1.png'), auto");
                 }, 60)
@@ -106,9 +105,9 @@ function startGame() {
     $level = getLevel();
     $randNumber = getRandNumber(1, Math.pow($level, 2));
     $(`#mole_${$randNumber}`).attr("src", `../img/${$imgsTheme.active}`);
-    setTimeout(() => { //implementado
+    setTimeout(() => {
         $(`#mole_${$randNumber}`).attr("src", `img/${$imgsTheme.defaut}`)
-    }, 1000);
+    }, 800);
 }
 
 // Gera um numero aleatorio entre "min" e "max"
@@ -125,6 +124,7 @@ function getLevel() {
 function updateScore($img) {
     if($($img).attr("src").search($imgsTheme.active) != -1) {
         $("#score").text(parseInt($("#score").text()) + 1);
+        document.getElementById("punch").play();
         $($img).attr("src", `img/${$imgsTheme.dead}`);
     }
 }
