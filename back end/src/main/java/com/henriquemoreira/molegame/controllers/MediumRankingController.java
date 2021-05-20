@@ -28,4 +28,9 @@ public class MediumRankingController {
 	public MediumRanking newRank(@RequestBody MediumRanking rank) {
 		return service.newRank(rank);
 	}
+	
+	@GetMapping(value = "/top5")
+	public List<MediumRanking> top5Points() {
+		return service.findTop5ByOrderByPontosDesc();
+	}
 }

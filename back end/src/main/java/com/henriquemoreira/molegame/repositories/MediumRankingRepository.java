@@ -13,4 +13,6 @@ public interface MediumRankingRepository extends JpaRepository<MediumRanking, In
 
 	@Query(value = "SELECT * FROM medium_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
 	List<MediumRanking> searchTop();
+	
+	List<MediumRanking> findTop5ByOrderByPontosDesc();
 }

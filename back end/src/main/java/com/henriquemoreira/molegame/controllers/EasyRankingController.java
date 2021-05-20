@@ -15,17 +15,22 @@ import com.henriquemoreira.molegame.services.EasyRankingService;
 @RestController
 @RequestMapping(value = "/easy")
 public class EasyRankingController {
-	
+
 	@Autowired
 	EasyRankingService service;
-	
+
 	@GetMapping(value = "/rank")
-    public List<EasyRanking> all() {
-        return service.all();
-}
-	
+	public List<EasyRanking> all() {
+		return service.all();
+	}
+
 	@PostMapping(value = "/new-rank")
 	public EasyRanking newRank(@RequestBody EasyRanking rank) {
 		return service.newRank(rank);
+	}
+	
+	@GetMapping(value = "/top5")
+	public List<EasyRanking> top5Points() {
+		return service.findTop5ByOrderByPontosDesc();
 	}
 }

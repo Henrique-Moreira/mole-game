@@ -28,4 +28,9 @@ public class HardRankingController {
 	public HardRanking newRank(@RequestBody HardRanking rank) {
 		return service.newRank(rank);
 	}
+	
+	@GetMapping(value = "/top5")
+	public List<HardRanking> top5Points() {
+		return service.findTop5ByOrderByPontosDesc();
+	}
 }

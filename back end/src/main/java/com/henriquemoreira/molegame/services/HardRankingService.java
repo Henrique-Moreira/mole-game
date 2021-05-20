@@ -22,4 +22,8 @@ public class HardRankingService {
 	public HardRanking newRank(@RequestBody HardRanking rank) {
 		return repositorio.save(rank);
 	}
+	
+	public List<HardRanking> findTop5ByOrderByPontosDesc() {
+		return repositorio.findTop5ByOrderByPontosDesc();
+	}
 }

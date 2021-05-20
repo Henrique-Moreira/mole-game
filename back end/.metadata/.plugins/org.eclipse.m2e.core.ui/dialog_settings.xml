@@ -62,6 +62,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Faculdade\Game\back end"/>
 			<item value="D:\Faculdade\Game\back end"/>
 		</list>
 		<list key="projectNameTemplate">

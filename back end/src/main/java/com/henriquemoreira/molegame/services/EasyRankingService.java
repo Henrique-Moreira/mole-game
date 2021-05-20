@@ -22,4 +22,8 @@ public class EasyRankingService {
 	public EasyRanking newRank(@RequestBody EasyRanking rank) {
 		return repositorio.save(rank);
 	}
+
+	public List<EasyRanking> findTop5ByOrderByPontosDesc() {
+		return repositorio.findTop5ByOrderByPontosDesc();
+	}
 }

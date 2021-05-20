@@ -22,4 +22,8 @@ public class MediumRankingService {
 	public MediumRanking newRank(@RequestBody MediumRanking rank) {
 		return repositorio.save(rank);
 	}
+	
+	public List<MediumRanking> findTop5ByOrderByPontosDesc() {
+		return repositorio.findTop5ByOrderByPontosDesc();
+	}
 }

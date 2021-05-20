@@ -13,4 +13,6 @@ public interface HardRankingRepository extends JpaRepository<HardRanking, Intege
 
 	@Query(value = "SELECT * FROM hard_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
 	List<HardRanking> searchTop();
+	
+	List<HardRanking> findTop5ByOrderByPontosDesc();
 }

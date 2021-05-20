@@ -13,4 +13,6 @@ public interface EasyRankingRepository extends JpaRepository<EasyRanking, Intege
 	
 	@Query(value = "SELECT * FROM easy_ranking obj ORDER BY obj.pontos DESC LIMIT 5", nativeQuery = true)
 	List<EasyRanking> searchTop();
+	
+	List<EasyRanking> findTop5ByOrderByPontosDesc();
 }
