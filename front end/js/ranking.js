@@ -28,7 +28,7 @@ function insertRank($score) {
 // busca no back-end o ranking
 function createRank($level) {
     $("#tBodyRanking").empty();
-    $.getJSON(`http://localhost:8080/${$level}/rank`,
+    $.getJSON(`https://backend-molegame.herokuapp.com/${$level}/rank`,
         function ($registros) {
             let $tbody = $("#tBodyRanking");
             for ($i = 0; $i < $registros.length; $i++) {
