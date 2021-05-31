@@ -32,7 +32,7 @@ $(document).ready(function () {
         $nivel = $("#level").val();
         createRank($nivel);
     });
-    $("#game").css("cursor", "url('../img/marreta1.png'), auto");
+    $("#game").css("cursor", "url('./img/marreta1.png'), auto");
 });
 
 function clearIntervals() {
@@ -88,9 +88,9 @@ function placeHolesBoard($level) {
         $img = $("<img>").attr({ "src":`img/${$imgsTheme.defaut}`, "id": `mole_${$i + 1}` });
         $($img).click(function(){
             setTimeout(() => {
-                $("#game").css("cursor", "url('../img/marreta2.png'), auto");
+                $("#game").css("cursor", "url('./img/marreta2.png'), auto");
                 setTimeout(() => {
-                    $("#game").css("cursor", "url('../img/marreta1.png'), auto");
+                    $("#game").css("cursor", "url('./img/marreta1.png'), auto");
                 }, 60)
             }, 60);
             updateScore(this);
@@ -104,7 +104,7 @@ function startGame() {
    // fillBoard();
     $level = getLevel();
     $randNumber = getRandNumber(1, Math.pow($level, 2));
-    $(`#mole_${$randNumber}`).attr("src", `../img/${$imgsTheme.active}`);
+    $(`#mole_${$randNumber}`).attr("src", `./img/${$imgsTheme.active}`);
     setTimeout(() => {
         $(`#mole_${$randNumber}`).attr("src", `img/${$imgsTheme.defaut}`)
     }, 800);
