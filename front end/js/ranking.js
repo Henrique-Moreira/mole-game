@@ -7,11 +7,11 @@ var currentDate = `${(('' + day).length < 2 ? '0' : '') + day}/${(('' + month).l
 // atualiza o ranking
 function insertRank($score) {
     $dificuldade = $("#level").val();
-    $.getJSON("http://localhost:8080/usuarios",
+    $.getJSON("https://backend-molegame.herokuapp.com/usuarios",
         function ($registros) {
             const $user = localStorage.getItem("user");
             const $userObject = $registros.find($usuario => $usuario.user == $user);
-            const $url = `http://localhost:8080/${$dificuldade}/new-rank`;
+            const $url = `https://backend-molegame.herokuapp.com/${$dificuldade}/new-rank`;
             const $objectRank = {
                 "pontos": parseInt($score),
                 "data": currentDate,

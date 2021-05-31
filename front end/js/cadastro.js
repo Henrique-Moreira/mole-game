@@ -3,10 +3,10 @@ $(document).ready(function () {
         let $user = $("#user").val();
         let $pwd = $("#pwd").val();
         let data = { "user": $user, "pwd": $pwd };
-        let url = "http://localhost:8080/usuarios/new-user";
+        let url = "https://backend-molegame.herokuapp.com/usuarios/new-user";
 
         if ($user && $pwd) {
-            $.getJSON("http://localhost:8080/usuarios",
+            $.getJSON("https://backend-molegame.herokuapp.com/usuarios",
                 function ($registros) {
                     if ($registros.find($usuario => $usuario.user == $user))
                         alert("O usuário informado já tem cadastro, crie um usuário diferente.")
